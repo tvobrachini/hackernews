@@ -1,6 +1,6 @@
 import datetime
 
-from django.http import HttpResponse
+from django.shortcuts import render_to_response
 from django.utils.timezone import utc
 from .models import Story
 
@@ -22,16 +22,4 @@ def top_stories(top=180, consider=1000):
 
 def index(request):
     stories = top_stories(top=30)
-    response = """
-    <html>
-        <head>
-            <title>Hackenews!</title>
-        </head>
-        <body>
-            <ol>
-            %s
-            </ol>
-        </body>
-    </html>
-    """ % "\n".join(["<li>%s</li>" % story.title for story in stories])
-    return HttpResponse(response)
+    return render_to_response("stories/index.html", {"stories": stories})
