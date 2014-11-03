@@ -5,6 +5,7 @@ from django.utils.timezone import utc
 
 register = template.Library()
 
+
 @register.filter(name="age")
 def age(created_at):
     now = datetime.datetime.utcnow().replace(tzinfo=utc)
