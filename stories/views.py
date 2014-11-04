@@ -1,6 +1,6 @@
 import datetime
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.utils.timezone import utc
 from .models import Story
@@ -24,7 +24,7 @@ def top_stories(top=180, consider=1000):
 
 def index(request):
     stories = top_stories(top=30)
-    return render_to_response("stories/index.html", {"stories": stories})
+    return render(request, "stories/index.html", {"stories": stories})
 
 
 def story(request):
@@ -35,4 +35,4 @@ def story(request):
             return HttpResponseRedirect('/')
     else:
         form = StoryForm()
-    return render_to_response('stories/story.html', {'form': form})
+    return render(request, 'stories/story.html', {'form': form})
