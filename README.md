@@ -14,8 +14,8 @@ Aulas:
 * 8 -- ok
 * 9 -- ok
 * 10 -- ok
-* 11 -- Continuar nessa!!
-* 12
+* 11 -- ok
+* 12 -- Continuar nessa!!
 * 13
 * 14
 

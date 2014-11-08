@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.utils.timezone import utc
 from .models import Story
 from stories.forms import StoryForm
+from django.contrib.auth.decorators import login_required
 
 
 def score(story, gravity=1.8, timebase=120):
@@ -24,14 +25,20 @@ def top_stories(top=180, consider=1000):
 
 def index(request):
     stories = top_stories(top=30)
-    return render(request, "stories/index.html", {"stories": stories})
+    return render(request, "stories/index.html", {
+                  "stories": stories,
+                  "user": request.user
+                  })
 
 
+@login_required
 def story(request):
     if request.method == 'POST':
         form = StoryForm(request.POST)
         if form.is_valid():
-            form.save()
+            story = form.save(commit=False)
+            story.moderator = request.user
+            story.save()
             return HttpResponseRedirect('/')
     else:
         form = StoryForm()
