@@ -8,4 +8,5 @@ urlpatterns = patterns(
         {'template_name': 'auth/login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout',
         {'next_page': '/'}),
+    url(r'^vote/$', 'stories.views.vote'),
 )
