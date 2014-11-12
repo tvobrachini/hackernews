@@ -15,7 +15,7 @@ Aulas:
 * 9 -- ok
 * 10 -- ok
 * 11 -- ok
-* 12 -- ok (Não esquecer o gif e a jQuery)
+* 12 -- ok
 * 13 -- Continuar nessa!!!
 * 14
 
