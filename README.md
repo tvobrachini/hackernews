@@ -16,7 +16,7 @@ Aulas:
 * 10 -- ok
 * 11 -- ok
 * 12 -- ok
-* 13 -- Continuar nessa!!!
-* 14
+* 13 -- ok
+* 14 -- Continuar Nessa!!
 
 ## Lembrar de colocar um resumo no conteúdo das aulas!

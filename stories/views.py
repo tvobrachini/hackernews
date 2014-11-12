@@ -57,7 +57,7 @@ def vote(request):
     story = get_object_or_404(Story, pk=request.POST.get('story'))
     story.points += 1
     story.save()
-    user = request.user()
-    user.liked_stories_add(story)
+    user = request.user
+    user.liked_stories.add(story)
     user.save()
     return HttpResponse()
