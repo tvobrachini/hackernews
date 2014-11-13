@@ -18,7 +18,7 @@
                 {% else %}
                 <div id="user-info"><a href="{% url 'login' %}">login</a></div>
             {% endif %}
-            <div id="site-title"><h1> News </h1></div>
+            <div id="site-title"><h1><a href="{% url 'index' %}">News</a></h1></div>
         </div>
         {% block content %}
         {% endblock content %}
