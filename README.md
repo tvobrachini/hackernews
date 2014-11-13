@@ -17,6 +17,8 @@ Aulas:
 * 11 -- ok
 * 12 -- ok
 * 13 -- ok
-* 14 -- Continuar Nessa!!
+* 14 -- ok (Checar os forms para moderators)
+* Fazer form de novos usuários
+* Fazer novo header com menu de navegação
 
 ## Lembrar de colocar um resumo no conteúdo das aulas!
