@@ -10,7 +10,7 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Tiago Vinícius de Oliveira Brachini', 'tvobrachini@gmail.com'),
 )
 
 MANAGERS = ADMINS
